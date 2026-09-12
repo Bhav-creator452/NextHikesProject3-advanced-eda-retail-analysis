@@ -483,10 +483,6 @@ distributions.
 ---
 
 
-Update the filenames above if your actual repository uses different names.
-
----
-
 ## ▶️ 12. How to Run the Project
 
 Clone the repository

@@ -575,6 +575,4 @@ behavior.
 The project provides a strong foundation for further statistical analysis and
 predictive modelling.
 
-```
 
-```

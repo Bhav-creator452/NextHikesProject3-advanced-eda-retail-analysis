@@ -482,28 +482,12 @@ distributions.
 
 ---
 
-## 📁 12. Project Structure
-
-Advanced EDA in Python/
-│
-├── retail_large_dataset.csv
-├── Advanced_EDA_Retail_Analysis.ipynb
-├── Advanced_EDA_Retail_Analysis_PPT.pptx
-├── README.md
-├── requirements.txt
-└── screenshots/
-├── data_quality.png
-├── final_price_distribution.png
-├── product_price_vs_final_price.png
-├── discount_category_heatmap.png
-├── segment_age_heatmap.png
-└── correlation_heatmap.png
 
 Update the filenames above if your actual repository uses different names.
 
 ---
 
-## ▶️ 13. How to Run the Project
+## ▶️ 12. How to Run the Project
 
 Clone the repository
 git clone <your-github-repository-url>
@@ -518,7 +502,7 @@ Open the project notebook and run the cells from top to bottom.
 
 ---
 
-## 📦 14. Requirements
+## 📦 13. Requirements
 
 The project uses the following Python libraries:
 
@@ -530,7 +514,7 @@ jupyter
 
 ---
 
-## 📊 15. Visualizations Included
+## 📊 14. Visualizations Included
 
 The notebook contains a range of statistical and advanced visualizations,
 including:
@@ -553,7 +537,7 @@ investigated rather than simply increasing the number of charts.
 
 ---
 
-## 🔮 16. Future Scope
+## 🔮 15. Future Scope
 
 The completed EDA provides a foundation for further analytical and predictive
 work.

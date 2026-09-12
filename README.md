@@ -120,6 +120,7 @@ Outlier Detection & Investigation
 Business Insights
      ↓
 Recommendations
+```
 
 ## 🔎 1. Initial Data Exploration
 
@@ -136,6 +137,8 @@ Categorical frequency analysis
 Initial Dataset
 100,000 rows × 18 columns
 
+---
+
 ## ✅ 2. Data Quality Assessment
 
 Before performing visualization and statistical analysis, the dataset was
@@ -143,17 +146,19 @@ validated for missing values, duplicates, invalid values and logical
 inconsistencies.
 
 Validation Results
-Data Quality Check	Result
-Missing Values	0
-Duplicate Rows	0
-Invalid Numerical Values	0
-Invalid Date Values	0
-Categorical Whitespace Issues	0
-Missing Calendar Dates	0
-Pricing Formula Consistency	100%
+Data Quality Check Result
+Missing Values 0
+Duplicate Rows 0
+Invalid Numerical Values 0
+Invalid Date Values 0
+Categorical Whitespace Issues 0
+Missing Calendar Dates 0
+Pricing Formula Consistency 100%
 
 The dataset passed the validation stage without requiring row deletion or
 value correction.
+
+---
 
 ## ⚙️ 3. Data Preparation & Feature Engineering
 
@@ -172,6 +177,8 @@ Additional Analytical Feature
 age_group
 Final Analytical Dataset
 100,000 rows × 26 columns
+
+---
 
 ## 📈 4. Univariate Analysis
 
@@ -206,6 +213,8 @@ Boxplots
 Log-transformed distribution
 Skewness comparison
 
+---
+
 ## 👥 5. Categorical & Temporal Analysis
 
 Frequency distributions were analyzed for:
@@ -227,14 +236,16 @@ Key Observations
 
 Customer segments are broadly balanced:
 
-New       → 33.5%
-Regular   → 33.4%
-Premium   → 33.2%
+New → 33.5%
+Regular → 33.4%
+Premium → 33.2%
 
 Product-category transaction volumes are also broadly balanced.
 
 Transaction activity remains relatively stable across the 2023–2025 period,
 with some recurring monthly variation.
+
+---
 
 ## 🔗 6. Bivariate Analysis
 
@@ -256,11 +267,11 @@ Quantity vs Final Price
 
 Average final transaction value increases consistently with order quantity.
 
-Quantity	Average Final Price
-1	₹25,595.96
-2	₹51,382.11
-3	₹76,837.73
-4	₹102,663.72
+Quantity Average Final Price
+1 ₹25,595.96
+2 ₹51,382.11
+3 ₹76,837.73
+4 ₹102,663.72
 
 Pearson correlation:
 
@@ -277,30 +288,30 @@ Customer age does not appear to be a meaningful linear indicator of final
 transaction value.
 
 Customer Segment vs Final Price
-Customer Segment	Average Final Price
-Premium	₹64,430.45
-Regular	₹64,303.15
-New	₹63,766.75
+Customer Segment Average Final Price
+Premium ₹64,430.45
+Regular ₹64,303.15
+New ₹63,766.75
 
 Premium customers have the highest average final price, but the differences
 between segments are relatively small and their distributions overlap
 substantially.
 
 Product Category vs Return Rate
-Product Category	Return Rate
-Fashion	15.05%
-Home & Kitchen	14.89%
-Grocery	14.87%
-Health	14.83%
-Beauty	14.76%
-Electronics	14.47%
+Product Category Return Rate
+Fashion 15.05%
+Home & Kitchen 14.89%
+Grocery 14.87%
+Health 14.83%
+Beauty 14.76%
+Electronics 14.47%
 
 Return rates remain tightly clustered across product categories.
 
 Shipping Type vs Delivery Days
-Shipping Type	Average Delivery
-Express	5.50 days
-Standard	5.51 days
+Shipping Type Average Delivery
+Express 5.50 days
+Standard 5.51 days
 
 The two shipping types show almost identical average delivery times.
 
@@ -313,6 +324,8 @@ Spearman correlation:
 Return rates fluctuate across delivery durations but do not show a consistent
 increasing or decreasing pattern.
 
+---
+
 ## 🧩 7. Multivariate Analysis
 
 Multivariate analysis was used to study interactions among three or more
@@ -323,7 +336,7 @@ Product Category × Discount × Final Price
 Average final transaction price generally decreases as discount percentage
 increases.
 
-0% Discount  → ₹76,029.98 average final price
+0% Discount → ₹76,029.98 average final price
 30% Discount → ₹52,051.12 average final price
 
 The overall pattern is broadly similar across product categories.
@@ -351,17 +364,19 @@ Express + 7 days → 16.21% return rate
 However, the return rate does not consistently increase with longer delivery
 times.
 
+---
+
 ## 📐 8. Correlation Analysis
 
 Pearson correlation was calculated across the primary numerical variables.
 
 Strongest Relationships with Final Price
-Variable Pair	Pearson Correlation
-Product Price ↔ Final Price	0.73
-Quantity ↔ Final Price	0.58
-Discount ↔ Final Price	-0.14
-Age ↔ Final Price	≈ 0
-Delivery Days ↔ Final Price	≈ 0
+Variable Pair Pearson Correlation
+Product Price ↔ Final Price 0.73
+Quantity ↔ Final Price 0.58
+Discount ↔ Final Price -0.14
+Age ↔ Final Price ≈ 0
+Delivery Days ↔ Final Price ≈ 0
 Key Interpretation
 
 Final transaction value is most strongly associated with direct transaction
@@ -371,6 +386,8 @@ Discount percentage shows a weak negative linear relationship with final price,
 while age and delivery duration show virtually no linear relationship with
 final price.
 
+---
+
 ## 🚨 9. Outlier Detection & Investigation
 
 Potential outliers were identified using:
@@ -379,13 +396,13 @@ Boxplots
 Interquartile Range (IQR)
 Z-score
 Outlier Results
-Variable	IQR Outliers	Z-Score Outliers
-Age	0%	0%
-Product Price	0%	0%
-Quantity	0%	0%
-Discount Percentage	0%	0%
-Final Price	1.34%	0.50%
-Delivery Days	0%	0%
+Variable IQR Outliers Z-Score Outliers
+Age 0% 0%
+Product Price 0% 0%
+Quantity 0% 0%
+Discount Percentage 0% 0%
+Final Price 1.34% 0.50%
+Delivery Days 0% 0%
 Outlier Investigation
 
 The statistical outliers were concentrated in final_price.
@@ -410,6 +427,8 @@ Treatment Decision
 
 No observations were removed, capped or replaced solely because they were
 statistical outliers.
+
+---
 
 ## 💡 10. Key Business Insights
 
@@ -445,6 +464,8 @@ very similar return rates.
 Statistically unusual high-value transactions are internally consistent and
 were therefore retained.
 
+---
+
 ## 📌 11. Recommendations
 
 Based on the findings from the EDA:
@@ -459,8 +480,10 @@ relying on a single variable.
 Preserve valid high-value transactions when analyzing transaction-value
 distributions.
 
+---
 
 ## 📁 12. Project Structure
+
 Advanced EDA in Python/
 │
 ├── retail_large_dataset.csv
@@ -469,16 +492,19 @@ Advanced EDA in Python/
 ├── README.md
 ├── requirements.txt
 └── screenshots/
-    ├── data_quality.png
-    ├── final_price_distribution.png
-    ├── product_price_vs_final_price.png
-    ├── discount_category_heatmap.png
-    ├── segment_age_heatmap.png
-    └── correlation_heatmap.png
+├── data_quality.png
+├── final_price_distribution.png
+├── product_price_vs_final_price.png
+├── discount_category_heatmap.png
+├── segment_age_heatmap.png
+└── correlation_heatmap.png
 
 Update the filenames above if your actual repository uses different names.
 
+---
+
 ## ▶️ 13. How to Run the Project
+
 Clone the repository
 git clone <your-github-repository-url>
 Navigate to the project directory
@@ -490,6 +516,8 @@ jupyter notebook
 
 Open the project notebook and run the cells from top to bottom.
 
+---
+
 ## 📦 14. Requirements
 
 The project uses the following Python libraries:
@@ -500,7 +528,7 @@ matplotlib
 seaborn
 jupyter
 
-A requirements.txt file is included for easier environment setup.
+---
 
 ## 📊 15. Visualizations Included
 
@@ -522,6 +550,8 @@ Outlier analysis
 
 The visualizations were selected based on the analytical question being
 investigated rather than simply increasing the number of charts.
+
+---
 
 ## 🔮 16. Future Scope
 
@@ -546,6 +576,8 @@ BCA Student | Python | Data Analytics | Machine Learning
 Project: Advanced Exploratory Data Analysis of Retail Transaction Data
 Organization: NextHikes IT Solutions
 
+---
+
 ⭐ Conclusion
 
 This project demonstrates a complete Exploratory Data Analysis workflow,
@@ -562,4 +594,7 @@ behavior.
 
 The project provides a strong foundation for further statistical analysis and
 predictive modelling.
+
+```
+
 ```
